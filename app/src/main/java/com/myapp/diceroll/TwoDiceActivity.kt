@@ -71,7 +71,6 @@ class TwoDiceActivity : AppCompatActivity() {
         val finalResult1 = Random.nextInt(1, 7)
         val finalResult2 = Random.nextInt(1, 7)
 
-        // Start first dice animation
         startRollingAnimation1(finalResult1, finalResult2)
     }
 
@@ -88,7 +87,6 @@ class TwoDiceActivity : AppCompatActivity() {
         imageViewTwoDice1.startAnimation(rotateAnimation)
         startFaceChangingAnimation1()
 
-        // Stop first dice after 1 second
         handler.postDelayed({
             stopRollingAnimation1(finalResult1, finalResult2)
         }, 1000)
@@ -112,10 +110,9 @@ class TwoDiceActivity : AppCompatActivity() {
         imageViewTwoDice1.setImageResource(diceImages[finalResult1 - 1])
         showFinalResult1(finalResult1)
 
-        // Start second dice animation after first dice is done
         handler.postDelayed({
             startRollingAnimation2(finalResult2)
-        }, 200) // Small delay before starting second dice
+        }, 200)
     }
 
     private fun startRollingAnimation2(finalResult2: Int) {
@@ -131,7 +128,6 @@ class TwoDiceActivity : AppCompatActivity() {
         imageViewTwoDice2.startAnimation(rotateAnimation)
         startFaceChangingAnimation2()
 
-        // Stop second dice after 1 second
         handler.postDelayed({
             stopRollingAnimation2(finalResult2)
         }, 1000)
@@ -155,7 +151,6 @@ class TwoDiceActivity : AppCompatActivity() {
         imageViewTwoDice2.setImageResource(diceImages[finalResult2 - 1])
         showFinalResult2(finalResult2)
 
-        // Re-enable button after both dice are done
         buttonRollTwoDice.isEnabled = true
     }
 

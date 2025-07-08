@@ -77,7 +77,6 @@ class ThreeDiceActivity : AppCompatActivity() {
         val finalResult2 = Random.nextInt(1, 7)
         val finalResult3 = Random.nextInt(1, 7)
 
-        // Start first dice animation
         startRollingAnimation1(finalResult1, finalResult2, finalResult3)
     }
 
@@ -94,7 +93,6 @@ class ThreeDiceActivity : AppCompatActivity() {
         imageViewThreeDice1.startAnimation(rotateAnimation)
         startFaceChangingAnimation1()
 
-        // Stop first dice after 1 second
         handler.postDelayed({
             stopRollingAnimation1(finalResult1, finalResult2, finalResult3)
         }, 1000)
@@ -118,7 +116,6 @@ class ThreeDiceActivity : AppCompatActivity() {
         imageViewThreeDice1.setImageResource(diceImages[finalResult1 - 1])
         showFinalResult1(finalResult1)
 
-        // Start second dice animation after first dice is done
         handler.postDelayed({
             startRollingAnimation2(finalResult2, finalResult3)
         }, 200)
@@ -137,7 +134,6 @@ class ThreeDiceActivity : AppCompatActivity() {
         imageViewThreeDice2.startAnimation(rotateAnimation)
         startFaceChangingAnimation2()
 
-        // Stop second dice after 1 second
         handler.postDelayed({
             stopRollingAnimation2(finalResult2, finalResult3)
         }, 1000)
@@ -161,7 +157,6 @@ class ThreeDiceActivity : AppCompatActivity() {
         imageViewThreeDice2.setImageResource(diceImages[finalResult2 - 1])
         showFinalResult2(finalResult2)
 
-        // Start third dice animation after second dice is done
         handler.postDelayed({
             startRollingAnimation3(finalResult3)
         }, 200)
@@ -180,7 +175,6 @@ class ThreeDiceActivity : AppCompatActivity() {
         imageViewThreeDice3.startAnimation(rotateAnimation)
         startFaceChangingAnimation3()
 
-        // Stop third dice after 1 second
         handler.postDelayed({
             stopRollingAnimation3(finalResult3)
         }, 1000)
@@ -204,7 +198,6 @@ class ThreeDiceActivity : AppCompatActivity() {
         imageViewThreeDice3.setImageResource(diceImages[finalResult3 - 1])
         showFinalResult3(finalResult3)
 
-        // Re-enable button after all dice are done
         buttonRollThreeDice.isEnabled = true
     }
 
@@ -237,6 +230,4 @@ class ThreeDiceActivity : AppCompatActivity() {
             .setDuration(500)
             .start()
     }
-
-
 }
