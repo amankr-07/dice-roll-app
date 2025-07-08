@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DiceRoll">
         <activity
+            android:name=".ThreeDiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TwoDiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OneDiceActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
