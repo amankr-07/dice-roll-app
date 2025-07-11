@@ -14,8 +14,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/button_back"
         android:src="@drawable/back_arrow"
-        android:contentDescription="Back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,6 +24,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="150dp"
+        android:contentDescription="@string/dice_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +54,7 @@
         android:backgroundTint="@color/button_color"
         android:paddingHorizontal="32dp"
         android:paddingVertical="16dp"
-        android:text="Roll"
+        android:text="@string/button_roll"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Dice Roll</string>
+
+    <string name="logo_desc">App Logo</string>
+    <string name="splash_logo">Splash Screen Logo</string>
+    <string name="dice_number">Choose the number of dice to be rolled.</string>
+
+    <string name="dice_1">Dice 1</string>
+    <string name="dice_2">Dice 2</string>
+    <string name="dice_3">Dice 3</string>
+    <string name="dice_4">Dice 4</string>
+    <string name="dice_5">Dice 5</string>
+    <string name="dice_6">Dice 6</string>
+
+    <string name="button_one">One</string>
+    <string name="button_two">Two</string>
+    <string name="button_three">Three</string>
+    <string name="button_roll">Roll</string>
+    <string name="button_back">Back</string>
+
+    <string name="version">Version 1.0</string>
 </resources>
